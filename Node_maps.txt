@@ -1,0 +1,46 @@
+> let candy = new Map();
+undefined
+> candy.set('purple', 'grape');
+Map { 'purple' => 'grape' }
+> candy.set('blue', 'blueberry');
+Map { 'purple' => 'grape', 'blue' => 'blueberry' }
+> candy.set('green', 'lime');
+Map { 'purple' => 'grape', 'blue' => 'blueberry', 'green' => 'lime' }
+> candy.set('yellow', 'banana');
+Map {
+  'purple' => 'grape',
+  'blue' => 'blueberry',
+  'green' => 'lime',
+  'yellow' => 'banana' }
+> candy.set('red','strawberry');
+Map {
+  'purple' => 'grape',
+  'blue' => 'blueberry',
+  'green' => 'lime',
+  'yellow' => 'banana',
+  'red' => 'strawberry' }
+> for (let [color, flavor] of candy) {
+... console.log(`The ${flavor} flavor is colored ${color}`);
+... }
+The grape flavor is colored purple
+The blueberry flavor is colored blue
+The lime flavor is colored green
+The banana flavor is colored yellow
+The strawberry flavor is colored red
+undefined
+> candy.get('purple');
+'grape'
+> candy.get('orange');
+undefined
+> function returnCandyFlavor(inputColor, candy){
+... if (! candy.get(inputColor)){ //if candy.get(inputColor) does not exist
+..... console.log('Sorry, that color does not have a flavor.');
+..... }
+... return candy.get(inputColor);
+... }
+undefined
+> returnCandyFlavor('purple', candy);
+'grape'
+> returnCandyFlavor('orange', candy);
+Sorry, that color does not have a flavor.
+

@@ -1,0 +1,56 @@
+> const greeting = "Hellooooooo";
+undefined
+> greeting
+'Hellooooooo'
+> const chars = greeting.split('');
+undefined
+> chars
+[ 'H', 'e', 'l', 'l', 'o', 'o', 'o', 'o', 'o', 'o', 'o' ]
+> const newGreeting = chars.join('');
+undefined
+> newGreeting
+'Hellooooooo'
+> function getRandomInt(max) {
+... return Math.floor(Math.random() * Math.floor(max));
+... }
+undefined
+> getRandomInt(5.5)
+0
+> getRandomInt(5.5)
+4
+> let index = chars[getRandomInt(chars.length)];
+undefined
+> index
+'o'
+> index = getRandomInt(chars.length);
+2
+> let letter = chars[index];
+undefined
+> letter
+'l'
+> index
+2
+> function swapRandomLetters(chars){
+... let index1 = getRandomInt(chars.length);
+... let letter1 = chars[index1];
+... let index2 = getRandomInt(chars.length);
+... let letter2 = chars[index2];
+... chars[index1] = letter2;
+... chars[index2] = letter1;
+... }
+undefined
+> swapRandomLetters(chars);
+undefined
+> chars
+[ 'H', 'e', 'l', 'l', 'o', 'o', 'o', 'o', 'o', 'o', 'o' ]
+> chars = 'abcdefg'
+TypeError: Assignment to constant variable.
+> let newText = 'abcdefg';
+undefined
+> let newChars = newText.split('');
+undefined
+> swapRandomLetters(newChars);
+undefined
+> newChars
+[ 'b', 'a', 'c', 'd', 'e', 'f', 'g' ]
+> 
